@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function plus(a, b) {
+        console.log(a + b);
+      }
+      function divide(a, b) {
+        console.log(a / b);
+      }
+      plus(); //NaN: Not a Number(숫자가 아님) 출력
+      plus(60, 8);
+      divide(98, 20);
+
+      // 오브젝트 안에서 매개변수가 argument를 받는 방식
+      const player = {
+        name: "Choi",
+        sayHello: function (otherPersonsName) {
+          console.log("hello! " + otherPersonsName);
+        },
+      };
+      console.log(player.name);
+      player.sayHello("Kim");
+      player.sayHello("Park");
+    </script>
+  </body>
+</html>
