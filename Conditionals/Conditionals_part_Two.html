@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const age = parseInt(prompt("How old are you?"));
+      console.log(isNaN(age)); // isNaN() function은 argument가 NaN인지 아닌지 즉,number인지 아닌지를 boolean으로 알려준다.
+
+      if (isNaN(age)) {
+        console.log("Please write a number"); // (condition) == true
+      } else {
+        console.log("Thank you for writing your age."); // (condition) == false
+      }
+    </script>
+  </body>
+</html>
