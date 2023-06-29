@@ -18,10 +18,20 @@
       const title = document.querySelector(".hello h1");
 
       function handleTitleClick() {
-        console.log("title was clicked!");
+        title.style.color = "blue";
       }
+      function handleMouseEnter() {
+        title.innerText = "Mouse is here!";
+      }
+      function handleMouseLeave() {
+        title.innerText = "Mouse is gone!";
+      }
+
       title.addEventListener("click", handleTitleClick);
       // title을 click하면 handleTitleClick function이 실행됨
+      title.addEventListener("mouseenter", handleMouseEnter); 
+      // 마우스가 title 위로 올라가면 (css의 hover과 같음)
+      title.addEventListener("mouseleave", handleMouseLeave); // 마우스를 title 밖으로 내보내면
     </script>
   </body>
 </html>
