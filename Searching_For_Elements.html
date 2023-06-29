@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Grab me 1!</h1>
+    </div>
+    <div class="hello">
+      <h1>Grab me 2!</h1>
+    </div>
+    <div class="hello">
+      <h1>Grab me 3!</h1>
+    </div>
+
+    <script>
+      const hellos = document.getElementsByClassName("hello");
+      //여러개의 class="hello"를 가진 태크들이 있는 array
+      console.log(hellos);
+
+      const title = document.getElementsByTagName("h1"); // 모든 h1 태그들이 있는 array
+      console.log(title);
+
+      const ex = document.querySelector(".hello h1"); // hello class 안에 있는 h1을 말함
+      //element를 가지고 오는 가장 멋진 방법
+      // querySelector는 element를 CSS 방식으로 검색할 수 있음
+      // class="hello" 안에 있는 h1이 여러개 있는 경우 첫 번째 element만 가져옴
+      console.log(ex);
+
+      const exa = document.querySelectorAll(".hello h1"); // class="hello"안에 있는 모든 h1이 있는 array
+      console.log(exa);
+    </script>
+  </body>
+</html>
