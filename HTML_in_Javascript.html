@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="hello" id="title">Grab me!</h1>
+    <script>
+      const title = document.getElementById("title");
+      // Jabascript로 HTML에서 id="title"을 가진 태그를 가져옴
+      console.dir(title); // dir은 element를 더 자세하게 보여줌
+
+      title.innerText = "Got you"; // Javascript에서 id="title"을 가진 태그 내용 수정
+      console.log(title);
+
+      console.log(title.id);
+      console.log(title.className);// id="title"을 가진 태그의 className 출력
+    </script>
+  </body>
+</html>
