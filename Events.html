@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Grab me 1!</h1>
+    </div>
+    <script>
+      const title = document.querySelector(".hello h1");
+
+      function handleTitleClick() {
+        console.log("title was clicked!");
+      }
+      title.addEventListener("click", handleTitleClick);
+      // title을 click하면 handleTitleClick function이 실행됨
+    </script>
+  </body>
+</html>
