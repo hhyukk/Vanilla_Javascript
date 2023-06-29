@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Grab me 1!</h1>
+    </div>
+    <script>
+      const h1 = document.querySelector(".hello h1");
+
+      function handleTitleClick() {
+        h1.style.color = "blue";
+      }
+      function handleMouseEnter() {
+        h1.innerText = "Mouse is here!";
+      }
+      function handleMouseLeave() {
+        h1.innerText = "Mouse is gone!";
+      }
+      function handleWindowResize() {
+        document.body.style.backgroundColor = "tomato";
+      }
+      function handleWindowCopy() {
+        alert("copier!");
+      }
+      function handleWindowOffline() {
+        alert("SOS no WIFI!");
+      }
+      function handleWindowOnline() {
+        alert("ALL GOOD");
+      }
+
+      h1.addEventListener("click", handleTitleClick);
+      // h1.onclick = handleTitleClick;
+      // title을 click하면 handleTitleClick function이 실행됨
+      h1.addEventListener("mouseenter", handleMouseEnter);
+      // h1.onmouseenter = handleMouseEnter;
+      // 마우스가 h1 위로 올라가면 (css의 hover과 같음)
+      h1.addEventListener("mouseleave", handleMouseLeave); // 마우스를 h1 밖으로 내보내면
+
+      window.addEventListener("resize", handleWindowResize);
+      window.addEventListener("copy", handleWindowCopy);
+      window.addEventListener("offline", handleWindowOffline);
+      window.addEventListener("online", handleWindowOnline);
+    </script>
+  </body>
+</html>
