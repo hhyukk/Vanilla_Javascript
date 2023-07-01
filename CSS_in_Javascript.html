@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Grab me 1!</h1>
+    </div>
+    <script>
+      const h1 = document.querySelector(".hello h1");
+
+      function handleTitleClick() {
+        const currentColor = h1.style.color;
+        let newColor;
+        if (currentColor === "blue") {
+          newColor = "tomato";
+        } else {
+          newColor = "blue";
+        }
+        h1.style.color = newColor;
+      }
+
+      h1.addEventListener("click", handleTitleClick);
+    </script>
+  </body>
+</html>
