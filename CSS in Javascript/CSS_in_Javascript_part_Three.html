@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+
+      h1 {
+        color: blue;
+        transition: 0.5s ease-in-out;
+      }
+      .clicked {
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Click me!</h1>
+    </div>
+    <script>
+      const h1 = document.querySelector(".hello h1");
+      const clickedClass = "clicked";
+      function handleTitleClick() {
+        if (h1.classList.contains(clickedClass)) {
+          // contains는 명시한 class가 HTML element의 class에 포함되어 있는지 말해줌
+          // 즉, classList가 clicked를 포함하고 있는지 말해줌
+          h1.classList.remove(clickedClass); //classList는 class들의 목록으로 작업할 수 있게끔 허용해준다.
+        } else {
+          h1.classList.add(clickedClass);
+        }
+      }
+      h1.addEventListener("click", handleTitleClick);
+
+      function handleTitleTouch() { // handleTitleclick 함수와 같은 기능
+        h1.classList.toggle("touch");
+        // toggle은 class name이 존재하는지 확인해 줌
+        // 만약 class name이 존재한다면 toggle은 class name을 제거함, 존재하지 않는다면 추가함
+      }
+      h1.addEventListener("click", handleTitleTouch);
+    </script>
+  </body>
+</html>
